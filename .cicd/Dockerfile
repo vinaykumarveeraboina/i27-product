@@ -16,8 +16,8 @@ COPY ["${JAR_SOURCE}", "/opt/i27/i27car-product.jar"]
 # Grant RWX persmission on this directory 
 RUN chmod 777 /opt/i27/
 
-# Expose port 8761 to allow external access to application.
-EXPOSE 8761
+# Expose port 8132 to allow external access to application.
+EXPOSE 8132
 
 # Specify the command to run the Spring Based application using the JAVA JAR File
 CMD ["java", "-jar", "/opt/i27/i27car-product.jar"]
