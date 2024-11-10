@@ -1,0 +1,31 @@
+# Create a Deployment file for product
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: i27-product-dev
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: i27-product-dev
+  template:
+    metadata:
+      labels:
+        app: i27-product-dev
+    spec:
+      containers:
+      - name: i27-product-dev
+        image: DIT # Docker Image Tag, which will be replaces later by sharedlib
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: i27-product-dev-svc
+spec:
+  selector:
+    app: i27-product-dev
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8761
+  type: NodePort

@@ -1,0 +1,33 @@
+# Create a deployment for product in stage environment
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: i27-product-stage
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: i27-product-stage
+  template:
+    metadata:
+      labels:
+        app: i27-product-stage
+    spec:
+      containers:
+      - name: i27-product-stage
+        image: DIT # Docker Image Tag, which will be replaces later by sharedlib
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: i27-product-stage-svc
+spec:
+  selector:
+    app: i27-product-stage
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8761
+  type: NodePort
