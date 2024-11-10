@@ -18,7 +18,6 @@ spec:
         image: DIT # Docker Image Tag, which will be replaces later by sharedlib
 
 ---
-
 apiVersion: v1
 kind: Service
 metadata:
@@ -30,4 +29,4 @@ spec:
     - protocol: TCP
       port: 80
       targetPort: 8761
-  type: NodePort
+  type: ClusterIP
