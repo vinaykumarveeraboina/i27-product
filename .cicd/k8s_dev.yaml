@@ -28,22 +28,25 @@ spec:
     - protocol: TCP
       port: 80
       targetPort: 8132
-  type: ClusterIP
+      nodePort: 30001
+  #type: ClusterIP
+  type: NodePort
+
 ---
 # Create a ingress for product-dev.i27carts.in
-apiVersion: networking.k8s.io/v1
-kind: Ingress
-metadata:
-  name: i27-product-dev-ingress
-spec:
-  rules:
-  - host: product-dev.i27carts.in
-    http:
-      paths: 
-      - pathType: Prefix
-        path: "/"
-        backend:
-          service:
-            name: i27-product-dev-svc
-            port:
-              number: 80
+# apiVersion: networking.k8s.io/v1
+# kind: Ingress
+# metadata:
+#   name: i27-product-dev-ingress
+# spec:
+#   rules:
+#   - host: product-dev.i27carts.in
+#     http:
+#       paths: 
+#       - pathType: Prefix
+#         path: "/"
+#         backend:
+#           service:
+#             name: i27-product-dev-svc
+#             port:
+#               number: 80
