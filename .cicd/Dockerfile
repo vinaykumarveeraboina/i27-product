@@ -11,7 +11,7 @@ WORKDIR /opt/i27/
 ARG JAR_SOURCE
 
 # Copy the JAR File 
-COPY ["${JAR_SOURCE}", "/opt/i27/i27car-product.jar"]
+COPY ["${JAR_SOURCE}", "/opt/i27/i27cart-product.jar"]
 
 # Grant RWX persmission on this directory 
 RUN chmod 777 /opt/i27/
@@ -20,6 +20,6 @@ RUN chmod 777 /opt/i27/
 EXPOSE 8132
 
 # Specify the command to run the Spring Based application using the JAVA JAR File
-CMD ["java", "-jar", "/opt/i27/i27car-product.jar"]
+CMD ["java", "-jar", "/opt/i27/i27cart-product.jar"]
 
 # CMD ["java", "-jar", "/*.jar"]

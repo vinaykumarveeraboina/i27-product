@@ -32,9 +32,9 @@ spring:
     activate:
       on-profile: dev
   datasource:
-    password: Gcp@db2024
-    url: jdbc:mysql://104.198.135.46:3306/learnerCrownClothing?useSSL=FALSE
-    username: db_user
+    password: cartinstance
+    url: jdbc:mysql://34.121.211.164:3306/learnerCrownClothing?useSSL=FALSE&allowPublicKeyRetrieval=true
+    username: root
   jpa:
     hibernate:
       ddl-auto: update
@@ -46,4 +46,6 @@ server:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://eureka-dev.i27carts.in/eureka/
+      defaultZone: http://34.59.147.191:5761/eureka/
+  instance:
+    preferIpAddress: true
