@@ -33,7 +33,7 @@ spring:
       on-profile: dev
   datasource:
     password: cartinstance
-    url: jdbc:mysql://34.121.211.164:3306/learnerCrownClothing?useSSL=FALSE&allowPublicKeyRetrieval=true
+    url: jdbc:mysql://i27project.mysql.database.azure.com:3306/learnerCrownClothing?useSSL=FALSE&allowPublicKeyRetrieval=true
     username: root
   jpa:
     hibernate:
