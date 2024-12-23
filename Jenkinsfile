@@ -72,7 +72,7 @@ pipeline {
                 withSonarQubeEnv('SonarQube') {
                     sh """
                     mvn clean verify sonar:sonar \
-                     -Dsonar.projectKey=i127-product \
+                     -Dsonar.projectKey=i27-product \
                      -Dsonar.host.url=${env.SONAR_URL} \
                      -Dsonar.login=${SONAR_TOKEN}
                     """
