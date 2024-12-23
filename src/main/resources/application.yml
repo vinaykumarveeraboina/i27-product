@@ -32,9 +32,9 @@ spring:
     activate:
       on-profile: dev
   datasource:
-    password: cartinstance
+    password: i27@project
     url: jdbc:mysql://i27project.mysql.database.azure.com:3306/learnerCrownClothing?useSSL=FALSE&allowPublicKeyRetrieval=true
-    username: root
+    username: i27project
   jpa:
     hibernate:
       ddl-auto: update
