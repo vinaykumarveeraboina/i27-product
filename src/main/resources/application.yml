@@ -33,7 +33,7 @@ spring:
       on-profile: dev
   datasource:
     password: i27@project
-    url: jdbc:mysql://i27project.mysql.database.azure.com/learnerCrownClothing?useSSL=FALSE&allowPublicKeyRetrieval=true
+    url: jdbc:mysql://i27project.mysql.database.azure.com/learnerCrownClothing
     username: i27project
   jpa:
     hibernate:
