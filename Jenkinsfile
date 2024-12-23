@@ -24,7 +24,7 @@ pipeline {
         POM_PACKAGING = readMavenPom().getPackaging()
         DOCKER_CREDS = credentials('DockerHub')
         SONAR_URL = 'http://35.224.218.172:9000'
-        SONAR_TOKEN = credentials('sonar')
+        SONAR_TOKEN = credentials('sonar-product')
     }
     tools {
         maven 'maven-3.8.8'
